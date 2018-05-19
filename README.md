@@ -1,3 +1,3 @@
 # henryreeb.io
 
-freeCodeCamp projects and code
+Portfolio site for Henry Reeb
