@@ -36,3 +36,24 @@ $(document).ready(function(){
   return false;
     });
 });
+
+/* About section image fade transition */
+
+$('img[data-hover]').mouseover(function() {
+var $image=$(this);
+
+
+$image.fadeOut(400, function() {
+  $image.attr('original', $image.attr('src'));
+  $image.attr('src',$image.attr('data-hover'));
+    }).fadeIn(400);
+
+}).mouseout(function() {
+var $image=$(this);
+
+
+$image.fadeOut(400, function() {
+  $image.attr('src',$image.attr('original'));
+    }).fadeIn(400);
+
+});
