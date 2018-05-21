@@ -13,8 +13,29 @@ function checkScroll(){
         $('.navbar').removeClass("scrolled");
     }
 }
+/* About section image fade transition */
+
+$('img[data-hover]').mouseover(function() {
+var $image=$(this);
+
+
+$image.fadeOut(400, function() {
+  $image.attr('original', $image.attr('src'));
+  $image.attr('src',$image.attr('data-hover'));
+    }).fadeIn(400);
+
+}).mouseout(function() {
+var $image=$(this);
+
+
+$image.fadeOut(400, function() {
+  $image.attr('src',$image.attr('original'));
+    }).fadeIn(400);
+
+});
 
 /* smooth scroll on anchor click */
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -35,25 +56,4 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop: 0}, 800);
   return false;
     });
-});
-
-/* About section image fade transition */
-
-$('img[data-hover]').mouseover(function() {
-var $image=$(this);
-
-
-$image.fadeOut(400, function() {
-  $image.attr('original', $image.attr('src'));
-  $image.attr('src',$image.attr('data-hover'));
-    }).fadeIn(400);
-
-}).mouseout(function() {
-var $image=$(this);
-
-
-$image.fadeOut(400, function() {
-  $image.attr('src',$image.attr('original'));
-    }).fadeIn(400);
-
 });
