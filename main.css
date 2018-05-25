@@ -27,7 +27,7 @@ body{
   cursor: pointer;
 }
 .nav-link {
-  margin-right: 1em !important;
+  margin-right: 1em;
 }
 .nav-link:hover{
   background: #f4f4f4;
@@ -37,7 +37,7 @@ body{
   justify-content: flex-end;
 }
 .navbar-light .navbar-toggler{
-  background:#fff !important;
+  background:#fff;
 }
 
 /* Hover.css Icon Bob */
@@ -194,7 +194,6 @@ body{
 .portfolio{
   background: #000000;
   margin: 1em 0;
-  position: relative;
 }
 .portfolio h1{
   text-transform: uppercase;
@@ -204,10 +203,20 @@ body{
   border-bottom: 1px dashed #10828C;
 }
 .portfolio img{
-  height: 14rem;
-  width: 100%;
   margin: 1em;
   padding-bottom: 2em;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.portfolio img:hover {
+  -webkit-transform:scale(1.10); /* Safari and Chrome */
+  -moz-transform:scale(1.10); /* Firefox */
+  -ms-transform:scale(1.10); /* IE 9 */
+  -o-transform:scale(1.10); /* Opera */
+  transform:scale(1.10);
 }
 
 /* contact */
@@ -224,7 +233,6 @@ body{
 }
 .contact-form h1{
   text-transform: uppercase;
-	/*padding:2em 1px;*/
 	color: #10828C;
   border-right: 1px dashed #10828C;
 }
@@ -245,4 +253,17 @@ body{
 .contact-form .right .form-control::placeholder{
 	color: #888;
 	font-size: 16px;
+}
+.footer{
+  background-color: #0d0d0d;
+  height: 80px;
+  width: 100%;
+}
+.bottom{
+  height: 70px;
+  color: white;
+  background-color: #000000;
+}
+.bottom p{
+  padding-top: 1em;
 }
