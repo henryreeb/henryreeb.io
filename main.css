@@ -172,8 +172,6 @@ body{
   margin: 1em;
 }
 .about img{
-  max-width: 50%;
-  height: auto;
   border-radius: 50%;
 }
 
