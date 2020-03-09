@@ -172,6 +172,7 @@ body{
   margin: 1em;
 }
 .about img{
+  object-fit: cover;
   border-radius: 50%;
 }
 
